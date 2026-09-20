@@ -19,10 +19,9 @@ select
     customers.customer_id,
     customers.first_name,
     customers.last_name,
-    /*payment.payment_id,*/
-    /*count(orders.order_id) as number_of_orders,*/
-    /*min(orders.order_date) as first_order_date,
-    max(orders.order_date) as most_recent_order_date*/
+    
+    min(orders.order_date) as first_order_date,
+    max(orders.order_date) as most_recent_order_date,
     count(payment.payment_id) as nb_of_payment,
     sum(payment.amount) as sum_of_payment
 
